@@ -59,4 +59,5 @@ def handle_message(event):
 
     # Send To Line
     reply = TextSendMessage(text=f"{get_message}")
+    line_bot_api.reply_message(event.reply_token, "http://web.cs.nthu.edu.tw/p/406-1174-193149,r109.php")
     line_bot_api.reply_message(event.reply_token, reply)
