@@ -55,5 +55,7 @@ def handle_message(event):
 def handle_message(event):
     get_message = event.message.text
     if get_message == 'Hi':
+        reply = TextSendMessage(text='我想睡覺')
         message = StickerSendMessage(package_id='1',sticker_id='1')
         line_bot_api.reply_message(event.reply_token, message)
+        line_bot_api.reply_message(event.reply_token, reply)
