@@ -57,5 +57,11 @@ def handle_message(event):
     if get_message == 'Hi':
         reply = TextSendMessage(text='我想睡覺')
         message = StickerSendMessage(package_id='1',sticker_id='1')
-        line_bot_api.reply_message(event.reply_token, message,reply)
+        line_bot_api.reply_message(event.reply_token, message)
+        
+      
+    if get_message == '簡介':
+        tt = 'https://p.facebook.com/csofficeNTHU/photos/a.1864273603844281/2782546688683630/?type=3&source=48&__tn__=EH-R'
+        reply = TextSendMessage(text=tt)
         line_bot_api.reply_message(event.reply_token, reply)
+        
