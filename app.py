@@ -104,6 +104,8 @@ def handle_message(event):
             )
         )
         line_bot_api.reply_message(event.reply_token, message)
+        reply = TextSendMessage(text='這是我的生活')
+        line_bot_api.reply_message(event.reply_token, reply)
         return 0
     
 if __name__ == '__main__':
