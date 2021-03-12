@@ -6,7 +6,7 @@ from flask import Flask, abort, request
 # https://github.com/line/line-bot-sdk-python
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
-from linebot.models import MessageEvent, TextMessage, TextSendMessage, ImageSendMessage, TemplateSendMessage, ButtonsTemplate, PostbackTemplateAction
+from linebot.models import MessageEvent, TextMessage, TextSendMessage, ImageSendMessage, TemplateSendMessage, ButtonsTemplate, PostbackTemplateAction, StickerSendMessage
 
 app = Flask(__name__)
 
@@ -50,3 +50,10 @@ def handle_message(event):
     tt = 'https://p.facebook.com/csofficeNTHU/photos/a.1864273603844281/2782546688683630/?type=3&source=48&__tn__=EH-R'
     reply = TextSendMessage(text=tt)
     line_bot_api.reply_message(event.reply_token, reply)
+    
+@handler.add(MessageEvent, message=TextMessage)
+def handle_message(event):
+    get_message = event.message.text
+    if get_message == 'Hi':
+        message = StickerSendMessage(package_id='1',sticker_id='1')
+        line_bot_api.reply_message(event.reply_token, message)
