@@ -47,6 +47,33 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, reply)
         return 0
     
+    if event.message.text == "生活":
+        message = TemplateSendMessage(
+            alt_text='ImageCarousel template',
+            template=ImageCarouselTemplate(
+                columns=[
+                    ImageCarouselColumn(
+                        image_url='https://imgur.com/gallery/jJhv5Z6',
+                        action=PostbackTemplateAction(
+                            label='postback1',
+                            text='postback text1',
+                            data='action=buy&itemid=1'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url='https://i.imgur.com/zubdvFK.jpg',
+                        action=PostbackTemplateAction(
+                            label='postback2',
+                            text='postback text2',
+                            data='action=buy&itemid=2'
+                        )
+                    )
+                ]
+            )
+        )
+        line_bot_api.reply_message(event.reply_token, message)
+        return 0
+    
 if __name__ == '__main__':
     app.run()
 
