@@ -41,7 +41,7 @@ def handle_message(event):
     #line_bot_api.reply_message(event.reply_token, reply)
     
     message = ImageSendMessage(
-    original_content_url='https://imgur.com/gallery/VzGTLQ7',
-    preview_image_url='https://imgur.com/gallery/VzGTLQ7'
+    original_content_url='https://p.facebook.com/csofficeNTHU/photos/a.1864273603844281/2782546688683630/?type=3&source=48&__tn__=EH-R',
+    preview_image_url='https://p.facebook.com/csofficeNTHU/photos/a.1864273603844281/2782546688683630/?type=3&source=48&__tn__=EH-R'
     )
     line_bot_api.reply_message(event.reply_token, message)
