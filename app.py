@@ -31,19 +31,7 @@ def callback():
 
         return "OK"
 
-def internet_news():
-    target_url = 'http://web.cs.nthu.edu.tw/p/406-1174-193149,r109.php'
-    print('Start parsing News....')
-    rs = requests.session()
-    res = rs.get(target_url, verify=False)
-    soup = BeautifulSoup(res.text, 'html.parser')
-    content = ""
-    for index, data in enumerate(soup.select('.rtddt a'), 0):
-        if index == 5:
-            return content
-        link = data['href']
-        content += '{}\n\n'.format(link)
-    return content
+
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
