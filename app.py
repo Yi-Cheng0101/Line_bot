@@ -104,9 +104,9 @@ def handle_message(event):
             )
         )
         line_bot_api.reply_message(event.reply_token, message)
-        reply = TextSendMessage(text='這是我的生活')
-        Channel.find_or_create_by(channel_id: channel_id)
-        response = line.push_message(channel_id, replay)
+        #reply = TextSendMessage(text='這是我的生活')
+        #Channel.find_or_create_by(channel_id: channel_id)
+        #response = line.push_message(channel_id, replay)
         return 0
     
 if __name__ == '__main__':
