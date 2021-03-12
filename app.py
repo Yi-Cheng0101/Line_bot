@@ -47,6 +47,30 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, reply)
         return 0
     
+    
+    if get_message == '亦程的生活':
+        message = ImagemapSendMessage(
+            base_url='https://i.imgur.com/zubdvFK.jpg',
+            alt_text='this is an imagemap',
+            base_size=BaseSize(height=1040, width=1040),
+            actions=[
+                URIImagemapAction(
+                    link_uri='https://i.imgur.com/zubdvFK.jpg',
+                    area=ImagemapArea(
+                        x=0, y=0, width=520, height=1040
+                    )
+                ),
+                MessageImagemapAction(
+                    text='hello',
+                    area=ImagemapArea(
+                        x=520, y=0, width=520, height=1040
+                    )
+                )
+            ]
+        )
+        line_bot_api.reply_message(event.reply_token, message)
+    
+    
     if event.message.text == "生活":
         message = TemplateSendMessage(
             alt_text='ImageCarousel template',
@@ -58,6 +82,14 @@ def handle_message(event):
                             label='postback1',
                             text='postback text1',
                             data='action=buy&itemid=1'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url='https://i.imgur.com/zubdvFK.jpg',
+                        action=PostbackTemplateAction(
+                            label='postback2',
+                            text='postback text2',
+                            data='action=buy&itemid=2'
                         )
                     ),
                     ImageCarouselColumn(
