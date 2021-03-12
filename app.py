@@ -38,7 +38,7 @@ def handle_message(event):
 
     # Send To Line
     tt = 'https://p.facebook.com/csofficeNTHU/photos/a.1864273603844281/2782546688683630/?type=3&source=48&__tn__=EH-R'
-    reply = TextSendMessage(text=f"{tt}")
+    reply = TextSendMessage(text=tt)
     line_bot_api.reply_message(event.reply_token, reply)
     
     
