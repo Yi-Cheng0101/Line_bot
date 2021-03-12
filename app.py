@@ -53,11 +53,3 @@ def handle_message(event):
     reply = TextSendMessage(text=f"{get_message}")
     line_bot_api.reply_message(event.reply_token, reply)
    
-@handler.add(MessageEvent, message=TextMessage)
-def handle_message(event):
-     if event.message.text == "得獎紀錄":
-        content = internet_news()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=content))
-        return 0
