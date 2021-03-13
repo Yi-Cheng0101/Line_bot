@@ -7,6 +7,7 @@ from flask import Flask, abort, request
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import *
+from linebot import LineBotApi
 
 app = Flask(__name__)
 
@@ -55,6 +56,12 @@ def handle_message(event):
         line_bot_api.push_message(to, reply_3)
         return 0 
       
+    if get_message == '履歷':
+        reply_0 = TextSendMessage(text='https://drive.google.com/file/d/1f5XW6uy9w6FpqUAKrL4nOBHoWCDS2gIn/view?usp=sharing')
+        line_bot_api.push_message(to, reply_0)
+        return 0
+        
+        
     if get_message == '簡介':
         tt = 'https://p.facebook.com/csofficeNTHU/photos/a.1864273603844281/2782546688683630/?type=3&source=48&__tn__=EH-R'
         reply = TextSendMessage(text=tt)
