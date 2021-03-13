@@ -37,6 +37,7 @@ def handle_message(event):
     
     # get user id when reply
     user_id = event.source.user_id
+    to = user_id
     print("user_id =", user_id)
     image_url = "https://i.imgur.com/eTldj2E.png?1"
     line_bot_api.push_message(to, ImageSendMessage(original_content_url=image_url, preview_image_url=image_url))
