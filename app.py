@@ -42,8 +42,8 @@ def handle_message(event):
     image_url = "https://i.imgur.com/eTldj2E.png?1"
     ##line_bot_api.push_message(to, ImageSendMessage(original_content_url=image_url, preview_image_url=image_url))
     
-    if get_message == 'Hi':
-        reply = TextSendMessage(text='我想睡覺')
+    if get_message == 'Hi' || get_message == '嗨' || get_message == '你好' || get_message == '嘿' || get_message == 'hi' :
+        reply = TextSendMessage(text='很高興有這次的機會，來讓我好好介紹我自己吧')
         message = StickerSendMessage(package_id='1',sticker_id='1')
         line_bot_api.reply_message(event.reply_token, message)
         line_bot_api.push_message(to, reply)
