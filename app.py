@@ -29,11 +29,18 @@ def callback():
             abort(400)
 
         return "OK"
-
+    
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     get_message = event.message.text
+    
+    # get user id when reply
+    user_id = event.source.user_id
+    print("user_id =", user_id)
+    image_url = "https://i.imgur.com/eTldj2E.png?1"
+    line_bot_api.push_message(to, ImageSendMessage(original_content_url=image_url, preview_image_url=image_url))
+    
     if get_message == 'Hi':
         reply = TextSendMessage(text='我想睡覺')
         message = StickerSendMessage(package_id='1',sticker_id='1')
