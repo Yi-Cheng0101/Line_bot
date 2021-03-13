@@ -104,11 +104,21 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://yi-cheng0101.github.io/Yi-Cheng0101/images/IMG_0297.jpg',
-                        action=PostbackTemplateAction(
-                            label='學生叢集競賽',
-                            text='postback text1',
-                            data='action=buy&itemid=1'
-                        )
+                        action=[
+                            PostbackTemplateAction(
+                                label='學生叢集競賽',
+                                text='postback text1',
+                                data='action=buy&itemid=1'
+                            ),
+                            MessageTemplateAction(
+                                label='message',
+                                text='message text'
+                            ),
+                            URITemplateAction(
+                                label='uri',
+                                uri='https://yi-cheng0101.github.io/Yi-Cheng0101/posts/my-third-post/'
+                            )
+                        ]
                     ),
                     ImageCarouselColumn(
                         image_url='https://i.imgur.com/zubdvFK.jpg',
