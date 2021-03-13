@@ -40,13 +40,13 @@ def handle_message(event):
     to = user_id
     print("user_id =", user_id)
     image_url = "https://i.imgur.com/eTldj2E.png?1"
-    line_bot_api.push_message(to, ImageSendMessage(original_content_url=image_url, preview_image_url=image_url))
+    ##line_bot_api.push_message(to, ImageSendMessage(original_content_url=image_url, preview_image_url=image_url))
     
     if get_message == 'Hi':
         reply = TextSendMessage(text='我想睡覺')
         message = StickerSendMessage(package_id='1',sticker_id='1')
         line_bot_api.reply_message(event.reply_token, message)
-        line_bot_api.reply_message(event.reply_token, reply)
+        line_bot_api.push_message(to, reply)
         return 0 
       
     if get_message == '簡介':
