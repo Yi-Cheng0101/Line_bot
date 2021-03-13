@@ -51,6 +51,8 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
         line_bot_api.push_message(to, reply_0)
         line_bot_api.push_message(to, reply_1)
+        line_bot_api.push_message(to, reply_2)
+        line_bot_api.push_message(to, reply_3)
         return 0 
       
     if get_message == '簡介':
