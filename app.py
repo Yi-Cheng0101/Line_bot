@@ -60,8 +60,8 @@ def handle_message(event):
                         data='action=buy&itemid=1'
                     ),
                     URITemplateAction(
-                    label='uri',
-                    uri='https://yi-cheng0101.github.io/Yi-Cheng0101/posts/my-third-post/'
+                        label='uri',
+                        uri='https://yi-cheng0101.github.io/Yi-Cheng0101/posts/my-third-post/'
                     ),
                     MessageTemplateAction(
                         label='No!',
