@@ -44,8 +44,8 @@ def handle_message(event):
     
     if (get_message == 'Hi') or (get_message == '嗨') or (get_message == '你好') or (get_message == '嘿') or (get_message == 'hi'):
         reply_0 = TextSendMessage(text='很高興有這次的機會，來讓我好好介紹我自己吧')
-        reply_1 = TextSendMessage(text='國立清華⼤學資訊工程學系四年級，為106學年大一不分系美術組入學，⼤二分流於資訊⼯程學系，從⼩在美術班的環境下長大，⾼中開始決定將美術為輔專心於學業上的學習，在⼤學入學時藉由學科的表現加上術科上的展現，獲得不分系美術組第⼀位入學，最後選擇熱愛的資訊工程領域學習。 努力修課的同時也不斷的嘗試自⼰的不同可能，除了在系上研究Kubenetes於AI + IoT、邊緣運算的畢業專題外，也與電機系教授嘗試AI於妝容辨識的跨領域專題研究。⼤三獲選進入資工系學⽣叢集競賽隊伍，於新加坡國家超級電腦中⼼主辦的HPC-AI Competition在眾多國際⼤學隊伍中榮獲亞軍，接續擔任學⽣教練及參賽隊員於德國及中國所舉辦的學生超級電腦競賽，課後之餘也繼續在清華藝集創作畫圖，舉辦個展及擔任助教。')
-        reply_2 = TextSendMessage(text='這是我的自傳，當然不知有這些')
+        reply_1 = TextSendMessage(text='國立清華⼤學資訊工程學系四年級，為106學年大一不分系美術組入學，⼤二分流於資訊⼯程學系，從⼩在美術班的環境下長大，⾼中開始決定將美術為輔專心於學業上的學習，在⼤學入學時藉由學科的表現加上術科上的展現，獲得不分系美術組第⼀位入學，最後選擇熱愛的資訊工程領域學習。')                     
+        reply_2 = TextSendMessage(text='努力修課的同時也不斷的嘗試自⼰的不同可能，除了在系上研究Kubenetes於AI + IoT、邊緣運算的畢業專題外，也與電機系教授嘗試AI於妝容辨識的跨領域專題研究。⼤三獲選進入資工系學⽣叢集競賽隊伍，於新加坡國家超級電腦中⼼主辦的HPC-AI Competition在眾多國際⼤學隊伍中榮獲亞軍，接續擔任學⽣教練及參賽隊員於德國及中國所舉辦的學生超級電腦競賽，課後之餘也繼續在清華藝集創作畫圖，舉辦個展及擔任助教。')
         reply_2 = TextSendMessage(text='生活 履歷 簡介 亦程的生活')
         message = StickerSendMessage(package_id='1',sticker_id='1')
         line_bot_api.reply_message(event.reply_token, message)
