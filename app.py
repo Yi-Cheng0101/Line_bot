@@ -67,7 +67,8 @@ def handle_message(event):
         
         
     if get_message == '簡介':
-        tt = 'https://p.facebook.com/csofficeNTHU/photos/a.1864273603844281/2782546688683630/?type=3&source=48&__tn__=EH-R'
+        #tt = 'https://p.facebook.com/csofficeNTHU/photos/a.1864273603844281/2782546688683630/?type=3&source=48&__tn__=EH-R'
+        tt = 'https://yi-cheng0101.github.io/Yi-Cheng0101/'
         reply = TextSendMessage(text=tt)
         line_bot_api.reply_message(event.reply_token, reply)
         return 0
