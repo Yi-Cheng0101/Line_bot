@@ -59,10 +59,12 @@ def handle_message(event):
     if get_message == '履歷':
         reply_0 = TextSendMessage(text='https://drive.google.com/file/d/1f5XW6uy9w6FpqUAKrL4nOBHoWCDS2gIn/view?usp=sharing')
         reply_1 = TextSendMessage(text='這是我的英文版履歷！')
+        reply_2 = TextSendMessage(text='更多學術研究在這喔')
         image_url = "https://github.com/Yi-Cheng0101/Yi-Cheng0101/blob/main/public/images/fullsizeoutput_150f.jpeg?raw=true"
         line_bot_api.push_message(to, ImageSendMessage(original_content_url=image_url, preview_image_url=image_url))
         line_bot_api.push_message(to, reply_0)
         line_bot_api.push_message(to, reply_1)
+        line_bot_api.push_message(to, reply_)
         return 0
         
         
