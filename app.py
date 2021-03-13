@@ -103,24 +103,6 @@ def handle_message(event):
             template=ImageCarouselTemplate(
                 columns=[
                     ImageCarouselColumn(
-                        image_url='https://yi-cheng0101.github.io/Yi-Cheng0101/images/IMG_0297.jpg',
-                        action=[
-                            PostbackTemplateAction(
-                                label='學生叢集競賽',
-                                text='postback text1',
-                                data='action=buy&itemid=1'
-                            ),
-                            MessageTemplateAction(
-                                label='message',
-                                text='message text'
-                            ),
-                            URITemplateAction(
-                                label='uri',
-                                uri='https://yi-cheng0101.github.io/Yi-Cheng0101/posts/my-third-post/'
-                            )
-                        ]
-                    ),
-                    ImageCarouselColumn(
                         image_url='https://i.imgur.com/zubdvFK.jpg',
                         action=PostbackTemplateAction(
                             label='清華藝集',
@@ -144,6 +126,32 @@ def handle_message(event):
         #Channel.find_or_create_by(channel_id: channel_id)
         #response = line.push_message(channel_id, replay)
         return 0
+    
+    if event.message.text == "看看":
+        message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+            thumbnail_image_url='https://yi-cheng0101.github.io/Yi-Cheng0101/images/IMG_0297.jpg',
+            title='Menu',
+            text='Please select',
+            actions=[
+                PostbackTemplateAction(
+                    label='postback',
+                    text='postback text',
+                    data='action=buy&itemid=1'
+                ),
+                MessageTemplateAction(
+                    label='message',
+                    text='message text'
+                ),
+                URITemplateAction(
+                    label='uri',
+                    uri='https://yi-cheng0101.github.io/Yi-Cheng0101/posts/my-third-post/'
+                )
+            ]
+        )
+    )
+    line_bot_api.reply_message(event.reply_token, message)
     
 if __name__ == '__main__':
     app.run()
