@@ -105,7 +105,7 @@ def handle_message(event):
                     ImageCarouselColumn(
                         image_url='https://yi-cheng0101.github.io/Yi-Cheng0101/images/IMG_0297.jpg',
                         action=PostbackTemplateAction(
-                            label='postback1',
+                            label='學生叢集競賽',
                             text='postback text1',
                             data='action=buy&itemid=1'
                         )
@@ -113,7 +113,7 @@ def handle_message(event):
                     ImageCarouselColumn(
                         image_url='https://i.imgur.com/zubdvFK.jpg',
                         action=PostbackTemplateAction(
-                            label='postback2',
+                            label='清華藝集',
                             text='postback text2',
                             data='action=buy&itemid=2'
                         )
@@ -121,7 +121,7 @@ def handle_message(event):
                     ImageCarouselColumn(
                         image_url='https://i.imgur.com/zubdvFK.jpg',
                         action=PostbackTemplateAction(
-                            label='postback2',
+                            label='生活',
                             text='postback text2',
                             data='action=buy&itemid=2'
                         )
