@@ -109,7 +109,7 @@ def handle_message(event):
             template=ImageCarouselTemplate(
                 columns=[
                     ImageCarouselColumn(
-                        image_url='https://i.imgur.com/zubdvFK.jpg',
+                        image_url='https://raw.githubusercontent.com/Yi-Cheng0101/Yi-Cheng0101/main/public/images/IMG_0297.jpg',
                         action=PostbackTemplateAction(
                             label='學生叢集競賽',
                             text='postback text2',
@@ -117,7 +117,7 @@ def handle_message(event):
                         )
                     ),
                     ImageCarouselColumn(
-                        image_url='https://i.imgur.com/zubdvFK.jpg',
+                        image_url='https://yi-cheng0101.github.io/Yi-Cheng0101/images/D8CAB960-A067-4497-AC8A-C13313BC59D5.JPG',
                         action=PostbackTemplateAction(
                             label='專題研究',
                             text='postback text2',
@@ -125,7 +125,7 @@ def handle_message(event):
                         )
                     ),
                     ImageCarouselColumn(
-                        image_url='https://i.imgur.com/zubdvFK.jpg',
+                        image_url='https://yi-cheng0101.github.io/Yi-Cheng0101/images/IMG_1800.JPG',
                         action=PostbackTemplateAction(
                             label='清華藝集',
                             text='postback text2',
@@ -133,7 +133,7 @@ def handle_message(event):
                         )
                     ),
                     ImageCarouselColumn(
-                        image_url='https://i.imgur.com/zubdvFK.jpg',
+                        image_url='https://github.com/Yi-Cheng0101/Yi-Cheng0101/blob/main/public/images/2360A9C0-F546-444B-9CAC-BE1382AA286E.JPG?raw=true',
                         action=PostbackTemplateAction(
                             label='生活',
                             text='postback text2',
