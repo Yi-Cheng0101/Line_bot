@@ -175,11 +175,11 @@ def handle_message(event):
         response = line_bot_api.push_message(to, reply)
         return 0
     
-    if event.message.text == "看看":
+    if event.message.text == "亦程的部落格":
         message = TemplateSendMessage(
             alt_text='Buttons template',
             template=ButtonsTemplate(
-            thumbnail_image_url='https://yi-cheng0101.github.io/Yi-Cheng0101/images/IMG_0297.jpg',
+            thumbnail_image_url='https://github.com/Yi-Cheng0101/Yi-Cheng0101/blob/main/public/images/fullsizeoutput_1511.jpeg?raw=true',
             title='Menu',
             text='Please select',
             actions=[
@@ -194,7 +194,7 @@ def handle_message(event):
                 ),
                 URITemplateAction(
                     label='uri',
-                    uri='https://yi-cheng0101.github.io/Yi-Cheng0101/posts/my-third-post/'
+                    uri='https://yi-cheng0101.github.io/Yi-Cheng0101/'
                 )
             ]
         )
