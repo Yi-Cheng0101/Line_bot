@@ -131,7 +131,7 @@ def handle_message(event):
                     area=ImagemapArea(
                         x=520, y=520, width=520, height=520
                     )
-                   
+                )  
             ]
             
         )
