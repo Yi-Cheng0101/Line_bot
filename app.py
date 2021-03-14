@@ -109,7 +109,7 @@ def handle_message(event):
             base_size=BaseSize(height=1040, width=1040),
             actions=[
                 MessageImagemapAction(
-                    text='當我很累想放鬆時，最常去海邊',
+                    text='這是我們家，我們常常利用休息的假日到處走走',
                     area=ImagemapArea(
                         x=0, y=0, width=520, height=520
                     )
@@ -216,24 +216,48 @@ def handle_message(event):
     
     if event.message.text == "外部連結":
         message = TemplateSendMessage(
-            alt_text='Buttons template',
-                template=ButtonsTemplate(
-                thumbnail_image_url='https://github.com/Yi-Cheng0101/Yi-Cheng0101/blob/main/public/images/fullsizeoutput_1511.jpeg?raw=true',
-                title='Menu',
-                text='Please select',
-                actions=[
-                    PostbackTemplateAction(
-                        label='postback',
-                        text='postback text',
-                        data='action=buy&itemid=1'
+            alt_text='Carousel template',
+            template=CarouselTemplate(
+                columns=[
+                    CarouselColumn(
+                        thumbnail_image_url='https://example.com/item1.jpg',
+                        title='this is menu1',
+                        text='description1',
+                        actions=[
+                            PostbackTemplateAction(
+                                label='postback1',
+                                text='postback text1',
+                                data='action=buy&itemid=1'
+                            ),
+                            MessageTemplateAction(
+                                label='message1',
+                                text='message text1'
+                            ),
+                            URITemplateAction(
+                                label='uri1',
+                                uri='http://example.com/1'
+                            )
+                        ]
                     ),
-                    MessageTemplateAction(
-                        label='message',
-                        text='message text'
-                    ),
-                    URITemplateAction(
-                        label='uri',
-                        uri='https://yi-cheng0101.github.io/Yi-Cheng0101/'
+                    CarouselColumn(
+                        thumbnail_image_url='https://example.com/item2.jpg',
+                        title='this is menu2',
+                        text='description2',
+                        actions=[
+                            PostbackTemplateAction(
+                                label='postback2',
+                                text='postback text2',
+                                data='action=buy&itemid=2'
+                            ),
+                            MessageTemplateAction(
+                                label='message2',
+                                text='message text2'
+                            ),
+                            URITemplateAction(
+                                label='uri2',
+                                uri='http://example.com/2'
+                            )
+                        ]
                     )
                 ]
             )
