@@ -217,47 +217,23 @@ def handle_message(event):
     if event.message.text == "外部連結":
         message = TemplateSendMessage(
             alt_text='Buttons template',
-            template=ButtonsTemplate(
-                columns=[
-                    CarouselColumn(
-                        thumbnail_image_url='https://github.com/Yi-Cheng0101/Yi-Cheng0101/blob/main/public/images/fullsizeoutput_1511.jpeg?raw=true',
-                        title='Menu',
-                        text='Please select',
-                        actions=[
-                            PostbackTemplateAction(
-                                label='postback',
-                                text='postback text',
-                                data='action=buy&itemid=1'
-                            ),
-                            MessageTemplateAction(
-                                label='message',
-                                text='message text'
-                            ),
-                            URITemplateAction(
-                                label='uri',
-                                uri='https://yi-cheng0101.github.io/Yi-Cheng0101/'
-                            )
-                        ]
+                template=ButtonsTemplate(
+                thumbnail_image_url='https://github.com/Yi-Cheng0101/Yi-Cheng0101/blob/main/public/images/fullsizeoutput_1511.jpeg?raw=true',
+                title='Menu',
+                text='Please select',
+                actions=[
+                    PostbackTemplateAction(
+                        label='postback',
+                        text='postback text',
+                        data='action=buy&itemid=1'
                     ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://github.com/Yi-Cheng0101/Yi-Cheng0101/blob/main/public/images/fullsizeoutput_1511.jpeg?raw=true',
-                        title='Menu',
-                        text='Please select',
-                        actions=[
-                            PostbackTemplateAction(
-                                label='postback',
-                                text='postback text',
-                                data='action=buy&itemid=1'
-                            ),
-                            MessageTemplateAction(
-                                label='message',
-                                text='message text'
-                            ),
-                            URITemplateAction(
-                                label='uri',
-                                uri='https://yi-cheng0101.github.io/Yi-Cheng0101/'
-                            )
-                        ]
+                    MessageTemplateAction(
+                        label='message',
+                        text='message text'
+                    ),
+                    URITemplateAction(
+                        label='uri',
+                        uri='https://yi-cheng0101.github.io/Yi-Cheng0101/'
                     )
                 ]
             )
