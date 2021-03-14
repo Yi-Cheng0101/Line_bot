@@ -108,18 +108,30 @@ def handle_message(event):
             alt_text='this is an imagemap',
             base_size=BaseSize(height=1040, width=1040),
             actions=[
-                URIImagemapAction(
-                    link_uri='https://i.imgur.com/zubdvFK.jpg',
+                MessagemagemapAction(
+                    text='當我很累想放鬆時，最常去海邊',
                     area=ImagemapArea(
                         x=0, y=0, width=520, height=520
                     )
                 ),
                 MessageImagemapAction(
-                    text='hello',
+                    text='我教小朋友畫圖',
                     area=ImagemapArea(
                         x=520, y=0, width=520, height=520
                     )
-                )
+                ),
+                MessageImagemapAction(
+                    text='我運動',
+                    area=ImagemapArea(
+                        x=0, y=520, width=520, height=520
+                    )
+                ),
+                MessageImagemapAction(
+                    text='我的家',
+                    area=ImagemapArea(
+                        x=520, y=520, width=520, height=520
+                    )
+                
             ]
             
         )
