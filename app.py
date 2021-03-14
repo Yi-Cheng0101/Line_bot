@@ -103,11 +103,27 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
     
     
-    if event.message.text == "生活":
+    if event.message.text == "亦程的大學生活":
         message = TemplateSendMessage(
             alt_text='ImageCarousel template',
             template=ImageCarouselTemplate(
                 columns=[
+                    ImageCarouselColumn(
+                        image_url='https://i.imgur.com/zubdvFK.jpg',
+                        action=PostbackTemplateAction(
+                            label='學生叢集競賽',
+                            text='postback text2',
+                            data='action=buy&itemid=2'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url='https://i.imgur.com/zubdvFK.jpg',
+                        action=PostbackTemplateAction(
+                            label='專題研究',
+                            text='postback text2',
+                            data='action=buy&itemid=2'
+                        )
+                    ),
                     ImageCarouselColumn(
                         image_url='https://i.imgur.com/zubdvFK.jpg',
                         action=PostbackTemplateAction(
@@ -127,10 +143,11 @@ def handle_message(event):
                 ]
             )
         )
+        user_id = event.source.user_id
+        to = user_id
         line_bot_api.reply_message(event.reply_token, message)
-        #reply = TextSendMessage(text='這是我的生活')
-        #Channel.find_or_create_by(channel_id: channel_id)
-        #response = line.push_message(channel_id, replay)
+        reply = TextSendMessage(text='可以點進去看更多')
+        response = line.push_message(to, replay)
         return 0
     
     if event.message.text == "看看":
