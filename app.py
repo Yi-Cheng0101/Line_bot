@@ -216,46 +216,46 @@ def handle_message(event):
     
     if event.message.text == "外部連結":
         message = TemplateSendMessage(
-            alt_text='Carousel template',
-            template=CarouselTemplate(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
                 columns=[
                     CarouselColumn(
                         thumbnail_image_url='https://github.com/Yi-Cheng0101/Yi-Cheng0101/blob/main/public/images/fullsizeoutput_1511.jpeg?raw=true',
-                        title='this is menu1',
-                        text='description1',
+                        title='Menu',
+                        text='Please select',
                         actions=[
                             PostbackTemplateAction(
-                                label='postback1',
-                                text='postback text1',
+                                label='postback',
+                                text='postback text',
                                 data='action=buy&itemid=1'
                             ),
                             MessageTemplateAction(
-                                label='message1',
-                                text='message text1'
+                                label='message',
+                                text='message text'
                             ),
                             URITemplateAction(
-                                label='uri1',
+                                label='uri',
                                 uri='https://yi-cheng0101.github.io/Yi-Cheng0101/'
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='',
-                        title='this is menu2',
-                        text='description2',
+                        thumbnail_image_url='https://github.com/Yi-Cheng0101/Yi-Cheng0101/blob/main/public/images/fullsizeoutput_1511.jpeg?raw=true',
+                        title='Menu',
+                        text='Please select',
                         actions=[
                             PostbackTemplateAction(
-                                label='postback2',
-                                text='postback text2',
-                                data='action=buy&itemid=2'
+                                label='postback',
+                                text='postback text',
+                                data='action=buy&itemid=1'
                             ),
                             MessageTemplateAction(
-                                label='message2',
-                                text='message text2'
+                                label='message',
+                                text='message text'
                             ),
                             URITemplateAction(
-                                label='uri2',
-                                uri='https://p.facebook.com/csofficeNTHU/photos/a.1864273603844281/2782546688683630/?type=3&source=48&__tn__=EH-R'
+                                label='uri',
+                                uri='https://yi-cheng0101.github.io/Yi-Cheng0101/'
                             )
                         ]
                     )
@@ -263,7 +263,6 @@ def handle_message(event):
             )
         )
         line_bot_api.reply_message(event.reply_token, message)
-
     
 if __name__ == '__main__':
     app.run()
