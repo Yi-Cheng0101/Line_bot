@@ -164,7 +164,7 @@ def handle_message(event):
                             label='生活',
                             text='postback text2',
                             data='action=buy&itemid=2',
-                            uir='https://yi-cheng0101.github.io/Yi-Cheng0101/posts/my-fourth-post/'
+                            ur='https://yi-cheng0101.github.io/Yi-Cheng0101/posts/my-fourth-post/'
                         )
                     )
                 ]
