@@ -114,6 +114,7 @@ def handle_message(event):
                             label='學生叢集競賽',
                             text='postback text2',
                             data='action=buy&itemid=2'
+                            uri='https://yi-cheng0101.github.io/Yi-Cheng0101/posts/my-third-post/'
                         )
                     ),
                     ImageCarouselColumn(
@@ -143,9 +144,6 @@ def handle_message(event):
                 ]
             )
         )
-        user_id = event.source.user_id
-        to = user_id
-        line_bot_api.reply_message(event.reply_token, message)
         reply = TextSendMessage(text='可以點進去看更多')
         response = line.push_message(to, replay)
         return 0
