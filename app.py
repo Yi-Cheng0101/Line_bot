@@ -228,6 +228,14 @@ def handle_message(event):
                                 label='link',
                                 uri='https://yi-cheng0101.github.io/Yi-Cheng0101/'
                             )
+                            MessageTemplateAction(
+                                label='message2',
+                                text='message text2'
+                            ),
+                            URITemplateAction(
+                                label='uri2',
+                                uri='http://example.com/2'
+                            )
                         ]
                     ),
                     CarouselColumn(
