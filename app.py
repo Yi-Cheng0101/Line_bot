@@ -221,21 +221,12 @@ def handle_message(event):
                 columns=[
                     CarouselColumn(
                         thumbnail_image_url='https://example.com/item1.jpg',
-                        title='this is menu1',
-                        text='description1',
+                        title='我的 Blog',
+                        text='部落格',
                         actions=[
-                            PostbackTemplateAction(
-                                label='postback1',
-                                text='postback text1',
-                                data='action=buy&itemid=1'
-                            ),
-                            MessageTemplateAction(
-                                label='message1',
-                                text='message text1'
-                            ),
                             URITemplateAction(
-                                label='uri1',
-                                uri='http://example.com/1'
+                                label='link',
+                                uri='https://yi-cheng0101.github.io/Yi-Cheng0101/'
                             )
                         ]
                     ),
