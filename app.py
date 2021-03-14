@@ -120,7 +120,22 @@ def handle_message(event):
                         x=520, y=0, width=520, height=1040
                     )
                 )
+            ],
+            actions=[
+                URIImagemapAction(
+                    link_uri='https://i.imgur.com/zubdvFK.jpg',
+                    area=ImagemapArea(
+                        x=520, y=520, width=520, height=1040
+                    )
+                ),
+                MessageImagemapAction(
+                    text='hello',
+                    area=ImagemapArea(
+                        x=520, y=520, width=520, height=1040
+                    )
+                )
             ]
+            
         )
         line_bot_api.reply_message(event.reply_token, message)
     
