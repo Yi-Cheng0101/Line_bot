@@ -65,10 +65,32 @@ def handle_message(event):
         reply_1 = TextSendMessage(text='這是我的英文版履歷！')
         reply_2 = TextSendMessage(text='更多學術研究在這喔!')
         image_url = "https://github.com/Yi-Cheng0101/Yi-Cheng0101/blob/main/public/images/fullsizeoutput_150f.jpeg?raw=true"
+        
+        message = TemplateSendMessage(
+            alt_text='Confirm template',
+            template=ConfirmTemplate(
+                text='Are you sure?',
+                actions=[
+                    URIAction(
+                        label='Yes',
+                        text='postback text',
+                        data='action=buy&itemid=1',
+                        uri='https://yi-cheng0101.github.io/Yi-Cheng0101/posts/my-second-post/'
+                    ),
+                    MessageTemplateAction(
+                        label='message',
+                        text='message text'
+                    )
+                ]
+            )
+        )
+
+        
         line_bot_api.push_message(to, ImageSendMessage(original_content_url=image_url, preview_image_url=image_url))
         line_bot_api.push_message(to, reply_0)
         line_bot_api.push_message(to, reply_1)
         line_bot_api.push_message(to, reply_2)
+        line_bot_api.push_message(to, message)
         return 0
         
         
@@ -120,26 +142,29 @@ def handle_message(event):
                     ),
                     ImageCarouselColumn(
                         image_url='https://yi-cheng0101.github.io/Yi-Cheng0101/images/D8CAB960-A067-4497-AC8A-C13313BC59D5.JPG',
-                        action=PostbackTemplateAction(
+                        action=URIAction(
                             label='專題研究',
                             text='postback text2',
-                            data='action=buy&itemid=2'
+                            data='action=buy&itemid=2',
+                            uri='https://yi-cheng0101.github.io/Yi-Cheng0101/posts/my-second-post/'
                         )
                     ),
                     ImageCarouselColumn(
                         image_url='https://yi-cheng0101.github.io/Yi-Cheng0101/images/IMG_1800.JPG',
-                        action=PostbackTemplateAction(
+                        action=URIAction(
                             label='清華藝集',
                             text='postback text2',
-                            data='action=buy&itemid=2'
+                            data='action=buy&itemid=2',
+                            uri='https://yi-cheng0101.github.io/Yi-Cheng0101/posts/my-first-post/'
                         )
                     ),
                     ImageCarouselColumn(
                         image_url='https://github.com/Yi-Cheng0101/Yi-Cheng0101/blob/main/public/images/2360A9C0-F546-444B-9CAC-BE1382AA286E.JPG?raw=true',
-                        action=PostbackTemplateAction(
+                        action=URIAction(
                             label='生活',
                             text='postback text2',
-                            data='action=buy&itemid=2'
+                            data='action=buy&itemid=2',
+                            uir='https://yi-cheng0101.github.io/Yi-Cheng0101/posts/my-fourth-post/'
                         )
                     )
                 ]
@@ -147,7 +172,7 @@ def handle_message(event):
         )
         line_bot_api.reply_message(event.reply_token, message)
         reply = TextSendMessage(text='可以點進去看更多')
-        response = line.push_message(to, replay)
+        response = line_bot_api.push_message(to, reply)
         return 0
     
     if event.message.text == "看看":
