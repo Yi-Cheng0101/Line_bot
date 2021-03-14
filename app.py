@@ -108,7 +108,7 @@ def handle_message(event):
             alt_text='this is an imagemap',
             base_size=BaseSize(height=1040, width=1040),
             actions=[
-                MessagemagemapAction(
+                MessageImagemapAction(
                     text='當我很累想放鬆時，最常去海邊',
                     area=ImagemapArea(
                         x=0, y=0, width=520, height=520
