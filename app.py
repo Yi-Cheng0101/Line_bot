@@ -104,7 +104,7 @@ def handle_message(event):
     
     if get_message == '亦程的生活':
         message = ImagemapSendMessage(
-            base_url='https://i.imgur.com/zubdvFK.jpg',
+            base_url='https://github.com/Yi-Cheng0101/Yi-Cheng0101/blob/main/public/images/IMG_1822.JPG?raw=true',
             alt_text='this is an imagemap',
             base_size=BaseSize(height=1040, width=1040),
             actions=[
