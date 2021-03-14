@@ -109,25 +109,25 @@ def handle_message(event):
             base_size=BaseSize(height=1040, width=1040),
             actions=[
                 MessageImagemapAction(
-                    text='這是我們家，我們常常利用休息的假日到處走走',
+                    text='這是我們家，我們常常利用休息的假日到處走走 🚘',
                     area=ImagemapArea(
                         x=0, y=0, width=520, height=520
                     )
                 ),
                 MessageImagemapAction(
-                    text='我教小朋友畫圖',
+                    text='這是我出生的地方彰化社頭，農村的小鄉鎮 ☀',
                     area=ImagemapArea(
                         x=520, y=0, width=520, height=520
                     )
                 ),
                 MessageImagemapAction(
-                    text='我運動',
+                    text='這是我教小朋友畫圖，寒暑假有空的話我常常會去小學教小朋友畫圖，這是去年我去台東鸞山國小時拍的 🗣',
                     area=ImagemapArea(
                         x=0, y=520, width=520, height=520
                     )
                 ),
                 MessageImagemapAction(
-                    text='我的家',
+                    text='這是我平常想要放鬆時，都會喜歡跑去海邊，還可以讓我平靜又放鬆 🌊',
                     area=ImagemapArea(
                         x=520, y=520, width=520, height=520
                     )
