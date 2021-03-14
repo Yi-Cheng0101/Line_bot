@@ -110,7 +110,8 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://raw.githubusercontent.com/Yi-Cheng0101/Yi-Cheng0101/main/public/images/IMG_0297.jpg',
-                        action=PostbackTemplateAction(
+                        #action=PostbackTemplateAction(
+                        action=URIAction(
                             label='學生叢集競賽',
                             text='postback text2',
                             data='action=buy&itemid=2'
