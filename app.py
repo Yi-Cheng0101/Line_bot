@@ -60,7 +60,7 @@ def handle_message(event):
         line_bot_api.push_message(to, reply_4)
         return 0 
       
-    if get_message == '履歷':
+    elif get_message == '履歷':
         #reply_0 = TextSendMessage(text='https://drive.google.com/file/d/1f5XW6uy9w6FpqUAKrL4nOBHoWCDS2gIn/view?usp=sharing')
         reply_1 = TextSendMessage(text='這是我的英文版履歷！')
         #reply_2 = TextSendMessage(text='更多學術研究在這喔!')
@@ -94,7 +94,7 @@ def handle_message(event):
         return 0
         
         
-    if get_message == '簡介':
+    elif get_message == '簡介':
         #tt = 'https://p.facebook.com/csofficeNTHU/photos/a.1864273603844281/2782546688683630/?type=3&source=48&__tn__=EH-R'
         tt = 'https://github.com/Yi-Cheng0101'
         reply = TextSendMessage(text=tt)
@@ -102,7 +102,7 @@ def handle_message(event):
         return 0
     
     
-    if get_message == '生活':
+    elif get_message == '生活':
         message = ImagemapSendMessage(
             base_url='https://github.com/Yi-Cheng0101/Yi-Cheng0101/blob/main/public/images/IMG_1822.JPG?raw=true',
             alt_text='this is an imagemap',
@@ -140,7 +140,7 @@ def handle_message(event):
         line_bot_api.push_message(to, reply)
         
     
-    if event.message.text == "大學時光":
+    elif event.message.text == "大學時光":
         message = TemplateSendMessage(
             alt_text='ImageCarousel template',
             template=ImageCarouselTemplate(
@@ -190,7 +190,7 @@ def handle_message(event):
         response = line_bot_api.push_message(to, reply)
         return 0
     
-    if event.message.text == "部落格":
+    elif event.message.text == "部落格":
         message = TemplateSendMessage(
             alt_text='Buttons template',
                 template=ButtonsTemplate(
@@ -216,7 +216,7 @@ def handle_message(event):
         )
         line_bot_api.reply_message(event.reply_token, message)
     
-    if event.message.text == "外部連結":
+    elif event.message.text == "外部連結":
         message = TemplateSendMessage(
             alt_text='Carousel template',
             template=CarouselTemplate(
@@ -286,6 +286,10 @@ def handle_message(event):
            
         )
         line_bot_api.reply_message(event.reply_token, message)
+        
+    else:
+        reply = TextSendMessage(text='可以打以下關鍵字！ 『簡介』『履歷』『大學時光』『生活』『外部連結』『程式作品』就可以看更多喔')
+        response = line_bot_api.push_message(to, reply)
 
 
     
