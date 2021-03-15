@@ -61,6 +61,7 @@ def handle_message(event):
         return 0 
       
     elif get_message == '履歷':
+        t=1
         #reply_0 = TextSendMessage(text='https://drive.google.com/file/d/1f5XW6uy9w6FpqUAKrL4nOBHoWCDS2gIn/view?usp=sharing')
         reply_1 = TextSendMessage(text='這是我的英文版履歷！')
         #reply_2 = TextSendMessage(text='更多學術研究在這喔!')
@@ -95,6 +96,7 @@ def handle_message(event):
         
         
     elif get_message == '簡介':
+        t=1
         #tt = 'https://p.facebook.com/csofficeNTHU/photos/a.1864273603844281/2782546688683630/?type=3&source=48&__tn__=EH-R'
         tt = 'https://github.com/Yi-Cheng0101'
         reply = TextSendMessage(text=tt)
@@ -141,6 +143,7 @@ def handle_message(event):
         t=1
     
     elif event.message.text == "大學時光":
+        t=1
         message = TemplateSendMessage(
             alt_text='ImageCarousel template',
             template=ImageCarouselTemplate(
@@ -288,7 +291,7 @@ def handle_message(event):
         )
         line_bot_api.reply_message(event.reply_token, message)
         t=1
-    elif t == 0:
+    elif (t == 0) and ((get_message != 'Hi') or (get_message != '嗨') or (get_message != '你好') or (get_message != '嘿') or (get_message != 'hi') or (get_message != '簡介') ):
         reply = TextSendMessage(text='哇，這不在關鍵字中，可以打以下關鍵字！ 『簡介』『履歷』『大學時光』『生活』『外部連結』『程式作品』來認識我喔')
         response = line_bot_api.push_message(to, reply)
 
