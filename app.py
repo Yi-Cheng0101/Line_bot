@@ -253,11 +253,31 @@ def handle_message(event):
                             ),
                             MessageTemplateAction(
                                 label='內容',
-                                text='比賽內容'
+                                text='賀!資工系王子文等7位同學榮獲2020 APAC HPC-AI Competition Second Prize (指導教授:周志遠教授)'
                             ),
                             URITemplateAction(
                                 label='連結',
                                 uri='https://www.facebook.com/csofficeNTHU/photos/a.1864273603844281/2782546688683630'
+                            )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://scontent-hkt1-1.xx.fbcdn.net/v/t1.0-9/p960x960/95332948_1860075580795900_3815032265772105728_o.jpg?_nc_cat=101&ccb=1-3&_nc_sid=730e14&_nc_ohc=9EfbUbtvBmIAX-eYNuX&_nc_ht=scontent-hkt1-1.xx&tp=6&oh=6a42570432aa597212df9fac7fbc3ab9&oe=60762F72',
+                        title='一覺自然醒過來 蕭亦程 個展',
+                        text='清大藝術中心報導',
+                        actions=[
+                            PostbackTemplateAction(
+                                label='簡介',
+                                text='【一覺自然醒過來｜2020蕭亦程個展】',
+                                data='action=buy&itemid=1'
+                            ),
+                            MessageTemplateAction(
+                                label='內容',
+                                text='上大學以後，畫圖變成蕭亦程記錄生活的方式，「一覺自然醒過來」記錄著他從申請大學時的作品集到現在的創作，呈現他對自我的探索。'
+                            ),
+                            URITemplateAction(
+                                label='連結',
+                                uri='https://www.facebook.com/nthuarts/posts/1860206264116165/'
                             )
                         ]
                     )
