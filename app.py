@@ -232,8 +232,8 @@ def handle_message(event):
                                 data='action=buy&itemid=1'
                             ),
                             MessageTemplateAction(
-                                label='message1',
-                                text='message text1'
+                                label='內容',
+                                text='裡面充滿了我的點滴喔'
                             ),
                             URITemplateAction(
                                 label='連結',
