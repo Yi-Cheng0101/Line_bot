@@ -86,13 +86,15 @@ def handle_message(event):
                 ]
             )
         )
-
+        
         
         line_bot_api.push_message(to, ImageSendMessage(original_content_url=image_url, preview_image_url=image_url))
         #line_bot_api.push_message(to, reply_0)
         line_bot_api.push_message(to, reply_1)
         #line_bot_api.push_message(to, reply_2)
         line_bot_api.push_message(to, message)
+        reply_f = TextSendMessage(text='關鍵字！ 『簡介』『履歷』『大學時光』『生活』『外部連結』『程式作品』來認識我喔')
+        response = line_bot_api.push_message(to, reply_f)
         return 0
         
         
@@ -102,6 +104,8 @@ def handle_message(event):
         tt = 'https://github.com/Yi-Cheng0101'
         reply = TextSendMessage(text=tt)
         line_bot_api.reply_message(event.reply_token, reply)
+        reply_f = TextSendMessage(text='關鍵字！ 『簡介』『履歷』『大學時光』『生活』『外部連結』『程式作品』來認識我喔')
+        response = line_bot_api.push_message(to, reply_f)
         return 0
     
     
@@ -291,10 +295,10 @@ def handle_message(event):
            
         )
         line_bot_api.reply_message(event.reply_token, message)
+        reply_f = TextSendMessage(text='關鍵字！ 『簡介』『履歷』『大學時光』『生活』『外部連結』『程式作品』來認識我喔')
+        response = line_bot_api.push_message(to, reply_f)
+    
         
-    elif (get_message != '這是我們家，我們常常利用休息的假日到處走走') or (get_message != '這是我出生的地方彰化社頭，農村的小鄉鎮 ☀') or (get_message != '這是我教小朋友畫圖，寒暑假有空的話我常常會去小學教小朋友畫圖，這是去年我去台東鸞山國小時拍的 🗣') or (get_message != '可以再輸入關鍵字了解我喔') or (get_message != '這是我平常想要放鬆時，都會喜歡跑去海邊，還可以讓我平靜又放鬆 🌊') or (get_message != '特別為了這次ChatBot做的Blog') or (get_message != '裡面充滿了我的點滴喔') or (get_message != '恭賀拿到亞軍') or (get_message != '賀!資工系王子文等7位同學榮獲2020 APAC HPC-AI Competition Second Prize (指導教授:周志遠教授)') or (get_message != '【一覺自然醒過來｜2020蕭亦程個展】') or (get_message != '上大學以後，畫圖變成蕭亦程記錄生活的方式，「一覺自然醒過來」記錄著他從申請大學時的作品集到現在的創作，呈現他對自我的探索。') or (get_message != 'Hi') or (get_message != '嗨') or (get_message != '你好') or (get_message != '嘿') or (get_message != 'hi') or (get_message != '簡介') :
-        reply = TextSendMessage(text='哇，這不在關鍵字中，可以打以下關鍵字！ 『簡介』『履歷』『大學時光』『生活』『外部連結』『程式作品』來認識我喔')
-        response = line_bot_api.push_message(to, reply)
 
 
     
