@@ -224,7 +224,7 @@ def handle_message(event):
                     CarouselColumn(
                         thumbnail_image_url='',
                         title='Blog',
-                        text='我的部落格',
+                        text='',
                         actions=[
                             PostbackTemplateAction(
                                 label='postback1',
@@ -244,7 +244,7 @@ def handle_message(event):
                     CarouselColumn(
                         thumbnail_image_url='',
                         title='HPC-AI Second Prize',
-                        text='賀!資工系王子文等7位同學榮獲',
+                        text='',
                         actions=[
                             PostbackTemplateAction(
                                 label='postback2',
@@ -263,8 +263,8 @@ def handle_message(event):
                     ),
                     CarouselColumn(
                         thumbnail_image_url='',
-                        title='一覺自然醒過來 個展',
-                        text='「一覺自然醒過來」記錄著他從申請大學時的作品集到現在的創作。',
+                        title='',
+                        text='',
                         actions=[
                             PostbackTemplateAction(
                                 label='postback2',
