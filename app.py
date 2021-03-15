@@ -222,7 +222,7 @@ def handle_message(event):
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
-                        thumbnail_image_url='https://github.com/Yi-Cheng0101/Yi-Cheng0101/blob/main/public/images/C72D0AA6-A225-4830-ADB6-0A082E76295E.jpg?raw=true',
+                        thumbnail_image_url='',
                         title='Blog',
                         text='我的部落格',
                         actions=[
@@ -242,7 +242,7 @@ def handle_message(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='http://web.cs.nthu.edu.tw/var/file/174/1174/pictures/905/m/mczh-tw1280x800_large36424_319472822358.png',
+                        thumbnail_image_url='',
                         title='HPC-AI Second Prize',
                         text='賀!資工系王子文等7位同學榮獲',
                         actions=[
@@ -262,7 +262,7 @@ def handle_message(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://example.com/item2.jpg',
+                        thumbnail_image_url='',
                         title='一覺自然醒過來 個展',
                         text='「一覺自然醒過來」記錄著他從申請大學時的作品集到現在的創作。',
                         actions=[
