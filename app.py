@@ -244,7 +244,7 @@ def handle_message(event):
                     CarouselColumn(
                         thumbnail_image_url='http://web.cs.nthu.edu.tw/var/file/174/1174/pictures/905/m/mczh-tw1280x800_large36424_319472822358.png',
                         title='HPC-AI Second Prize',
-                        text='賀!資工系王子文等7位同學榮獲2020 APAC HPC-AI Competition Second Prize',
+                        text='賀!資工系王子文等7位同學榮獲',
                         actions=[
                             PostbackTemplateAction(
                                 label='postback2',
@@ -264,7 +264,7 @@ def handle_message(event):
                     CarouselColumn(
                         thumbnail_image_url='https://example.com/item2.jpg',
                         title='一覺自然醒過來 個展',
-                        text='上大學以後，畫圖變成蕭亦程記錄生活的方式，「一覺自然醒過來」記錄著他從申請大學時的作品集到現在的創作，呈現他對自我的探索。',
+                        text='「一覺自然醒過來」記錄著他從申請大學時的作品集到現在的創作。',
                         actions=[
                             PostbackTemplateAction(
                                 label='postback2',
