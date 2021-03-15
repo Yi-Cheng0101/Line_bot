@@ -135,9 +135,10 @@ def handle_message(event):
             ]
             
         )
-        line_bot_api.reply_message(event.reply_token, message)
         reply = TextSendMessage(text='可以點圖片看我介紹我的生活！')
         line_bot_api.push_message(to, replay)
+        line_bot_api.reply_message(event.reply_token, message)
+        
     
     if event.message.text == "大學時光":
         message = TemplateSendMessage(
