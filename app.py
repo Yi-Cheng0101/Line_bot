@@ -222,9 +222,9 @@ def handle_message(event):
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
-                        thumbnail_image_url='',
-                        title='Blog',
-                        text='',
+                        thumbnail_image_url='https://example.com/item1.jpg',
+                        title='this is menu1',
+                        text='description1',
                         actions=[
                             PostbackTemplateAction(
                                 label='postback1',
@@ -237,14 +237,14 @@ def handle_message(event):
                             ),
                             URITemplateAction(
                                 label='uri1',
-                                uri=''
+                                uri='http://example.com/1'
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='',
-                        title='HPC-AI Second Prize',
-                        text='',
+                        thumbnail_image_url='https://example.com/item2.jpg',
+                        title='this is menu2',
+                        text='description2',
                         actions=[
                             PostbackTemplateAction(
                                 label='postback2',
@@ -257,14 +257,14 @@ def handle_message(event):
                             ),
                             URITemplateAction(
                                 label='uri2',
-                                uri=''
+                                uri='http://example.com/2'
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='',
-                        title='',
-                        text='',
+                        thumbnail_image_url='https://example.com/item2.jpg',
+                        title='this is menu2',
+                        text='description2',
                         actions=[
                             PostbackTemplateAction(
                                 label='postback2',
@@ -277,7 +277,7 @@ def handle_message(event):
                             ),
                             URITemplateAction(
                                 label='uri2',
-                                uri=''
+                                uri='http://example.com/2'
                             )
                         ]
                     )
@@ -285,6 +285,7 @@ def handle_message(event):
             )
         )
         line_bot_api.reply_message(event.reply_token, message)
+
 
     
 if __name__ == '__main__':
