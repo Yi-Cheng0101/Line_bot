@@ -242,7 +242,7 @@ def handle_message(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='http://web.cs.nthu.edu.tw/var/file/174/1174/pictures/905/m/mczh-tw1280x800_large36424_319472822358.png',
+                        thumbnail_image_url='',
                         title='this is menu2',
                         text='description2',
                         actions=[
