@@ -81,7 +81,7 @@ def handle_message(event):
                     ),
                     MessageTemplateAction(
                         label='No',
-                        text='可以再輸入關鍵字了解我喔'
+                        text='可以再輸入關鍵字更認識我，關鍵字！ 『簡介』『履歷』『大學時光』『生活』『外部連結』『程式作品』來認識我喔'
                     )
                 ]
             )
@@ -93,8 +93,8 @@ def handle_message(event):
         line_bot_api.push_message(to, reply_1)
         #line_bot_api.push_message(to, reply_2)
         line_bot_api.push_message(to, message)
-        reply_f = TextSendMessage(text='關鍵字！ 『簡介』『履歷』『大學時光』『生活』『外部連結』『程式作品』來認識我喔')
-        response = line_bot_api.push_message(to, reply_f)
+        #reply_f = TextSendMessage(text='關鍵字！ 『簡介』『履歷』『大學時光』『生活』『外部連結』『程式作品』來認識我喔')
+        #response = line_bot_api.push_message(to, reply_f)
         return 0
         
         
