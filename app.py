@@ -226,11 +226,11 @@ def handle_message(event):
                         title='Blog',
                         text='我的部落格',
                         actions=[
-                            PostbackTemplateAction(
-                                label='postback1',
-                                text='postback text1',
-                                data='action=buy&itemid=1'
-                            ),
+                            #PostbackTemplateAction(
+                             #   label='postback1',
+                              #  text='postback text1',
+                               # data='action=buy&itemid=1'
+                            #),
                             MessageTemplateAction(
                                 label='message1',
                                 text='message text1'
