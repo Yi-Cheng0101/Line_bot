@@ -254,7 +254,7 @@ def handle_message(event):
                             ),
                             URITemplateAction(
                                 label='uri2',
-                                uri='http://example.com/2'
+                                uri='https://p.facebook.com/csofficeNTHU/photos/a.1864273603844281/2782546688683630/?type=3&source=48&__tn__=EH-R'
                             )
                         ]
                     ),
@@ -274,7 +274,7 @@ def handle_message(event):
                             ),
                             URITemplateAction(
                                 label='uri2',
-                                uri='http://example.com/2'
+                                uri='https://www.facebook.com/nthuarts/posts/1860206264116165/'
                             )
                         ]
                     )
