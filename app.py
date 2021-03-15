@@ -227,8 +227,8 @@ def handle_message(event):
                         text='我的部落格',
                         actions=[
                             PostbackTemplateAction(
-                                label='postback1',
-                                text='postback text1',
+                                label='簡介',
+                                text='特別為了這次ChatBot做的Blog',
                                 data='action=buy&itemid=1'
                             ),
                             MessageTemplateAction(
@@ -237,32 +237,32 @@ def handle_message(event):
                             ),
                             URITemplateAction(
                                 label='連結',
-                                uri='http://example.com/1'
+                                uri='https://yi-cheng0101.github.io/Yi-Cheng0101/'
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://example.com/item2.jpg',
+                        thumbnail_image_url='http://web.cs.nthu.edu.tw/var/file/174/1174/pictures/905/m/mczh-tw1280x800_large36424_319472822358.png',
                         title='this is menu2',
                         text='description2',
                         actions=[
                             PostbackTemplateAction(
-                                label='postback2',
-                                text='postback text2',
+                                label='簡介',
+                                text='特別為了這次ChatBot做的Blog',
                                 data='action=buy&itemid=2'
                             ),
                             MessageTemplateAction(
-                                label='message2',
-                                text='message text2'
+                                label='內容',
+                                text='裡面充滿了我的點滴喔'
                             ),
                             URITemplateAction(
                                 label='連結',
-                                uri='http://example.com/2'
+                                uri='https://yi-cheng0101.github.io/Yi-Cheng0101/'
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://example.com/item2.jpg',
+                        thumbnail_image_url='',
                         title='this is menu2',
                         text='description2',
                         actions=[
