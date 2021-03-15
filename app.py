@@ -222,9 +222,9 @@ def handle_message(event):
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
-                        thumbnail_image_url='https://example.com/item1.jpg',
-                        title='this is menu1',
-                        text='description1',
+                        thumbnail_image_url='https://github.com/Yi-Cheng0101/Yi-Cheng0101/blob/main/public/images/C72D0AA6-A225-4830-ADB6-0A082E76295E.jpg?raw=true',
+                        title='Blog',
+                        text='我的部落格',
                         actions=[
                             PostbackTemplateAction(
                                 label='postback1',
@@ -237,14 +237,14 @@ def handle_message(event):
                             ),
                             URITemplateAction(
                                 label='uri1',
-                                uri='http://example.com/1'
+                                uri='https://yi-cheng0101.github.io/Yi-Cheng0101/'
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://example.com/item2.jpg',
-                        title='this is menu2',
-                        text='description2',
+                        thumbnail_image_url='http://web.cs.nthu.edu.tw/var/file/174/1174/pictures/905/m/mczh-tw1280x800_large36424_319472822358.png',
+                        title='HPC-AI Second Prize',
+                        text='賀!資工系王子文等7位同學榮獲2020 APAC HPC-AI Competition Second Prize',
                         actions=[
                             PostbackTemplateAction(
                                 label='postback2',
@@ -257,14 +257,14 @@ def handle_message(event):
                             ),
                             URITemplateAction(
                                 label='uri2',
-                                uri='http://example.com/2'
+                                uri='https://p.facebook.com/csofficeNTHU/photos/a.1864273603844281/2782546688683630/?type=3&source=48&__tn__=EH-R'
                             )
                         ]
                     ),
                     CarouselColumn(
                         thumbnail_image_url='https://example.com/item2.jpg',
-                        title='this is menu2',
-                        text='description2',
+                        title='一覺自然醒過來 個展',
+                        text='上大學以後，畫圖變成蕭亦程記錄生活的方式，「一覺自然醒過來」記錄著他從申請大學時的作品集到現在的創作，呈現他對自我的探索。',
                         actions=[
                             PostbackTemplateAction(
                                 label='postback2',
@@ -277,7 +277,7 @@ def handle_message(event):
                             ),
                             URITemplateAction(
                                 label='uri2',
-                                uri='http://example.com/2'
+                                uri='https://p.facebook.com/csofficeNTHU/photos/a.1864273603844281/2782546688683630/?type=3&source=48&__tn__=EH-R'
                             )
                         ]
                     )
