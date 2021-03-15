@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 line_bot_api = LineBotApi(os.environ.get("CHANNEL_ACCESS_TOKEN"))
 handler = WebhookHandler(os.environ.get("CHANNEL_SECRET"))
-
+t =0
 
 @app.route("/", methods=["GET", "POST"])
 def callback():
@@ -138,7 +138,7 @@ def handle_message(event):
         reply = TextSendMessage(text='可以點圖片看我介紹我的生活！')
         line_bot_api.reply_message(event.reply_token, message)
         line_bot_api.push_message(to, reply)
-        
+        t=1
     
     elif event.message.text == "大學時光":
         message = TemplateSendMessage(
@@ -215,7 +215,8 @@ def handle_message(event):
             )
         )
         line_bot_api.reply_message(event.reply_token, message)
-    
+        t=1
+        
     elif event.message.text == "外部連結":
         message = TemplateSendMessage(
             alt_text='Carousel template',
@@ -286,8 +287,8 @@ def handle_message(event):
            
         )
         line_bot_api.reply_message(event.reply_token, message)
-        
-    else:
+        t=1
+    elif t == 0:
         reply = TextSendMessage(text='哇，這不在關鍵字中，可以打以下關鍵字！ 『簡介』『履歷』『大學時光』『生活』『外部連結』『程式作品』來認識我喔')
         response = line_bot_api.push_message(to, reply)
 
