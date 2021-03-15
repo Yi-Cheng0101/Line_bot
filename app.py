@@ -98,7 +98,7 @@ def handle_message(event):
         return 0
         
         
-    elif get_message == '簡介':
+    elif get_message == '程式作品':
         
         #tt = 'https://p.facebook.com/csofficeNTHU/photos/a.1864273603844281/2782546688683630/?type=3&source=48&__tn__=EH-R'
         tt = 'https://github.com/Yi-Cheng0101'
