@@ -62,7 +62,7 @@ def handle_message(event):
         return 0 
       
     elif get_message == '履歷':
-        t=1
+        
         #reply_0 = TextSendMessage(text='https://drive.google.com/file/d/1f5XW6uy9w6FpqUAKrL4nOBHoWCDS2gIn/view?usp=sharing')
         reply_1 = TextSendMessage(text='這是我的英文版履歷！')
         #reply_2 = TextSendMessage(text='更多學術研究在這喔!')
@@ -81,7 +81,7 @@ def handle_message(event):
                     ),
                     MessageTemplateAction(
                         label='No',
-                        text='可以再輸入關鍵字了解我'
+                        text='可以再輸入關鍵字了解我喔'
                     )
                 ]
             )
@@ -97,7 +97,7 @@ def handle_message(event):
         
         
     elif get_message == '簡介':
-        t=1
+        
         #tt = 'https://p.facebook.com/csofficeNTHU/photos/a.1864273603844281/2782546688683630/?type=3&source=48&__tn__=EH-R'
         tt = 'https://github.com/Yi-Cheng0101'
         reply = TextSendMessage(text=tt)
@@ -141,10 +141,10 @@ def handle_message(event):
         reply = TextSendMessage(text='可以點圖片看我介紹我的生活！')
         line_bot_api.reply_message(event.reply_token, message)
         line_bot_api.push_message(to, reply)
-        t=1
+        
     
     elif event.message.text == "大學時光":
-        t=1
+       
         message = TemplateSendMessage(
             alt_text='ImageCarousel template',
             template=ImageCarouselTemplate(
@@ -219,7 +219,7 @@ def handle_message(event):
             )
         )
         line_bot_api.reply_message(event.reply_token, message)
-        t=1
+       
         
     elif event.message.text == "外部連結":
         message = TemplateSendMessage(
@@ -291,14 +291,13 @@ def handle_message(event):
            
         )
         line_bot_api.reply_message(event.reply_token, message)
-        t=1
-    elif (t == 0) and ((get_message != 'Hi') or (get_message != '嗨') or (get_message != '你好') or (get_message != '嘿') or (get_message != 'hi') or (get_message != '簡介') ):
+        
+    elif (get_message != '這是我們家，我們常常利用休息的假日到處走走 🚘') or (get_message != '這是我出生的地方彰化社頭，農村的小鄉鎮 ☀') or (get_message != '這是我教小朋友畫圖，寒暑假有空的話我常常會去小學教小朋友畫圖，這是去年我去台東鸞山國小時拍的 🗣') or (get_message != '可以再輸入關鍵字了解我喔') or (get_message != '這是我平常想要放鬆時，都會喜歡跑去海邊，還可以讓我平靜又放鬆 🌊') or (get_message != '特別為了這次ChatBot做的Blog') or (get_message != '裡面充滿了我的點滴喔') or (get_message != '恭賀拿到亞軍') or (get_message != '賀!資工系王子文等7位同學榮獲2020 APAC HPC-AI Competition Second Prize (指導教授:周志遠教授)') or (get_message != '【一覺自然醒過來｜2020蕭亦程個展】') or (get_message != '上大學以後，畫圖變成蕭亦程記錄生活的方式，「一覺自然醒過來」記錄著他從申請大學時的作品集到現在的創作，呈現他對自我的探索。') or (get_message != 'Hi') or (get_message != '嗨') or (get_message != '你好') or (get_message != '嘿') or (get_message != 'hi') or (get_message != '簡介') :
         reply = TextSendMessage(text='哇，這不在關鍵字中，可以打以下關鍵字！ 『簡介』『履歷』『大學時光』『生活』『外部連結』『程式作品』來認識我喔')
         response = line_bot_api.push_message(to, reply)
 
 
     
 if __name__ == '__main__':
-    t=0
     app.run()
 
