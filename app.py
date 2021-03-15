@@ -240,6 +240,26 @@ def handle_message(event):
                                 uri='https://yi-cheng0101.github.io/Yi-Cheng0101/'
                             )
                         ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://scontent.ftpe3-2.fna.fbcdn.net/v/t1.0-9/126284594_2782546692016963_574399515281676441_o.jpg?_nc_cat=102&ccb=1-3&_nc_sid=730e14&_nc_ohc=YOTPLfg9gM4AX9Medmz&_nc_ht=scontent.ftpe3-2.fna&oh=91d2cf3f9a3902c82e70bb12cda8fc5e&oe=607358CA',
+                        title='2020 APAC Seconfd Prize',
+                        text='系上報導',
+                        actions=[
+                            PostbackTemplateAction(
+                                label='簡介',
+                                text='恭賀拿到亞軍',
+                                data='action=buy&itemid=1'
+                            ),
+                            MessageTemplateAction(
+                                label='內容',
+                                text='比賽內容'
+                            ),
+                            URITemplateAction(
+                                label='連結',
+                                uri='https://www.facebook.com/csofficeNTHU/photos/a.1864273603844281/2782546688683630'
+                            )
+                        ]
                     )
                  ]
             )
