@@ -222,26 +222,6 @@ def handle_message(event):
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
-                        thumbnail_image_url='https://github.com/Yi-Cheng0101/Yi-Cheng0101/blob/main/public/images/C72D0AA6-A225-4830-ADB6-0A082E76295E.jpg?raw=true',
-                        title='我的 Blog',
-                        text='部落格',
-                        actions=[
-                            PostbackTemplateAction(
-                                label='postback2',
-                                text='postback text2',
-                                data='action=buy&itemid=2'
-                            ),
-                            MessageTemplateAction(
-                                label='message2',
-                                text='message text2'
-                            ),
-                            URITemplateAction(
-                                label='uri2',
-                                uri='https://p.facebook.com/csofficeNTHU/photos/a.1864273603844281/2782546688683630/?type=3&source=48&__tn__=EH-R'
-                            )
-                        ]
-                    ),
-                    CarouselColumn(
                         thumbnail_image_url='http://web.cs.nthu.edu.tw/var/file/174/1174/pictures/905/m/mczh-tw1280x800_large36424_319472822358.png',
                         title='HPC-AI Second Prize',
                         text='賀!資工系王子文等7位同學榮獲2020 APAC HPC-AI Competition Second Prize',
