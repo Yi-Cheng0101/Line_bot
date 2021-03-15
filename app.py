@@ -236,7 +236,7 @@ def handle_message(event):
                                 text='message text1'
                             ),
                             URITemplateAction(
-                                label='uri1',
+                                label='連結',
                                 uri='http://example.com/1'
                             )
                         ]
@@ -256,7 +256,7 @@ def handle_message(event):
                                 text='message text2'
                             ),
                             URITemplateAction(
-                                label='uri2',
+                                label='連結',
                                 uri='http://example.com/2'
                             )
                         ]
