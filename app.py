@@ -240,49 +240,10 @@ def handle_message(event):
                                 uri='https://yi-cheng0101.github.io/Yi-Cheng0101/'
                             )
                         ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://github.com/Yi-Cheng0101/Yi-Cheng0101/blob/main/public/images/C72D0AA6-A225-4830-ADB6-0A082E76295E.jpg?raw=true',
-                        title='this is menu2',
-                        text='description2',
-                        actions=[
-                            PostbackTemplateAction(
-                                label='簡介',
-                                text='特別為了這次ChatBot做的Blog',
-                                data='action=buy&itemid=2'
-                            ),
-                            MessageTemplateAction(
-                                label='內容',
-                                text='裡面充滿了我的點滴喔'
-                            ),
-                            URITemplateAction(
-                                label='連結',
-                                uri='https://yi-cheng0101.github.io/Yi-Cheng0101/'
-                            )
-                        ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url='',
-                        title='this is menu2',
-                        text='description2',
-                        actions=[
-                            PostbackTemplateAction(
-                                label='postback2',
-                                text='postback text2',
-                                data='action=buy&itemid=2'
-                            ),
-                            MessageTemplateAction(
-                                label='message2',
-                                text='message text2'
-                            ),
-                            URITemplateAction(
-                                label='uri2',
-                                uri='http://example.com/2'
-                            )
-                        ]
                     )
-                ]
+                 ]
             )
+           
         )
         line_bot_api.reply_message(event.reply_token, message)
 
